@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hương Vị Việt Nam - Tinh Hoa Ẩm Thực Ba Miền</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#991B1B',      /* Crimson red / Red wine */
+                            darkred: '#7F1D1D',  /* Deep red */
+                            gold: '#D97706',     /* Bronze/Gold */
+                            goldlight: '#FBBF24',
+                            cream: '#FDFBF7',    /* Cream background */
+                            creamdak: '#F3EFE6',
+                            green: '#15803D',    /* Herb green */
+                            dark: '#1C1917'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Be Vietnam Pro', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #FDFBF7;
+            color: #1C1917;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+        .pattern-bg {
+            background-color: #991b1b;
+            background-image: radial-gradient(#d97706 0.75px, transparent 0.75px), radial-gradient(#d97706 0.75px, #991b1b 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0,15px 15px;
+            opacity: 0.95;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(217, 119, 6, 0.2);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F3EFE6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #991B1B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7F1D1D;
+        }
+    </style>
+</head>
+<body class="antialiased text-stone-800 bg-brand-cream selection:bg-brand-red selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-brand-cream/95 backdrop-blur-md border-b border-brand-gold/20 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#trang-chu" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full bg-brand-red text-brand-goldlight flex items-center justify-center text-xl font-bold shadow-md group-hover:rotate-12 transition-transform duration-300 border border-brand-gold">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xl font-bold font-heading text-brand-red tracking-wide uppercase">Hương Vị Việt Nam</span>
+                        <span class="block text-xs text-brand-gold font-medium tracking-widest uppercase">Tinh Hoa Ẩm Thực</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#trang-chu" class="text-stone-700 hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Trang Chủ</a>
+                    <a href="#gioi-thieu" class="text-stone-700 hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Giới Thiệu</a>
+                    <a href="#ba-mien" class="text-stone-700 hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Ẩm Thực Ba Miền</a>
+                    <a href="#mon-noi-tieng" class="text-stone-700 hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Món Nổi Tiếng</a>
+                    <a href="#duong-pho" class="text-stone-700 hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Ẩm Thực Đường Phố</a>
+                    <a href="#le-hoi" class="text-stone-700 hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Lễ Hội & Tết</a>
+                    <a href="#dac-san" class="text-stone-700 hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Đặc Sản</a>
+                    <a href="#van-hoa" class="text-stone-700 hover:text-brand-red transition-colors py-1 border-b-2 border-transparent hover:border-brand-red">Giá Trị Văn Hóa</a>
+                </nav>
+
+                <!-- CTA Button & Mobile Toggle -->
+                <div class="flex items-center gap-4">
+                    <a href="#lien-he" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-red text-white text-sm font-medium hover:bg-brand-darkred transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Liên Hệ</span>
+                    </a>
+                    
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-stone-700 hover:text-brand-red hover:bg-stone-100 focus:outline-none" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-brand-cream border-b border-stone-200 px-4 pt-2 pb-6 space-y-3 transition-all">
+            <a href="#trang-chu" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-stone-800 hover:bg-brand-red hover:text-white">Trang Chủ</a>
+            <a href="#gioi-thieu" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-stone-800 hover:bg-brand-red hover:text-white">Giới Thiệu</a>
+            <a href="#ba-mien" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-stone-800 hover:bg-brand-red hover:text-white">Ẩm Thực Ba Miền</a>
+            <a href="#mon-noi-tieng" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-stone-800 hover:bg-brand-red hover:text-white">Món Ăn Nổi Tiếng</a>
+            <a href="#duong-pho" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-stone-800 hover:bg-brand-red hover:text-white">Ẩm Thực Đường Phố</a>
+            <a href="#le-hoi" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-stone-800 hover:bg-brand-red hover:text-white">Lễ Hội & Ngày Tết</a>
+            <a href="#dac-san" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-stone-800 hover:bg-brand-red hover:text-white">Đặc Sản Địa Phương</a>
+            <a href="#van-hoa" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-stone-800 hover:bg-brand-red hover:text-white">Giá Trị Văn Hóa</a>
+            <a href="#lien-he" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-stone-800 hover:bg-brand-red hover:text-white">Liên Hệ</a>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO BANNER (TRANG CHỦ) -->
+    <section id="trang-chu" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1583032015879-c542ab6ef557?q=80&w=1920&auto=format&fit=crop" 
+                 alt="Ẩm thực Việt Nam Banner" 
+                 class="w-full h-full object-cover object-center filter brightness-[0.4]"
+                 onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/7F1D1D/FFFFFF?text=Huong+Vi+Viet+Nam';">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-cream via-transparent to-black/60 z-0"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center text-white">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold/30 backdrop-blur-md border border-brand-gold/50 text-brand-goldlight text-sm font-semibold mb-6 animate-pulse">
+                <i class="fa-solid fa-star"></i> Tinh Hoa Văn Hóa Ẩm Thực Việt Nam
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold font-heading leading-tight mb-6 tracking-wide drop-shadow-md">
+                HƯƠNG VỊ VIỆT NAM
+            </h1>
+
+            <p class="text-lg sm:text-2xl text-stone-200 font-serif italic mb-8 max-w-3xl mx-auto drop-shadow">
+                "Một đất nước – Ngàn hương vị – Vạn trải nghiệm."
+            </p>
+
+            <p class="text-base sm:text-lg text-stone-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Chào mừng bạn đến với nơi hội tụ những nét tinh hoa của nền ẩm thực dân tộc. Hãy cùng chúng tôi hành trình khám phá từ Bắc vào Nam, thưởng thức trọn vẹn những câu chuyện gắn liền với văn hóa từng vùng miền.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#ba-mien" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-red text-white font-semibold text-lg hover:bg-brand-darkred transition-all shadow-xl hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-3 border border-brand-gold/40">
+                    <span>Khám Phá Ba Miền</span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+                <a href="#gioi-thieu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold text-lg border border-white/30 transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Tìm Hiểu Thêm</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Bottom subtle curve decoration -->
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-brand-cream to-transparent z-10"></div>
+    </section>
+
+    <!-- SECTION 2: GIỚI THIỆU & ĐẶC TRƯNG -->
+    <section id="gioi-thieu" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red font-semibold uppercase tracking-widest text-sm">Nét Đẹp Truyền Thống</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-stone-900 mt-2 mb-4">Giới Thiệu Về Ẩm Thực Việt Nam</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto rounded-full mb-6"></div>
+                <p class="text-stone-600 leading-relaxed text-base sm:text-lg">
+                    Ẩm thực Việt Nam là sự kết hợp hài hòa giữa nguyên liệu tự nhiên, cách chế biến tinh tế và sự cân bằng âm dương trong hương vị. Từ những bữa cơm gia đình giản dị đến các món đặc sản nổi tiếng, ẩm thực luôn gắn liền với đời sống và văn hóa của người Việt.
+                </p>
+            </div>
+
+            <!-- Grid 5 Đặc trưng -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col items-center text-center group hover:-translate-y-1">
+                    <div class="w-16 h-16 rounded-2xl bg-red-50 text-brand-red flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-red group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-stone-900 mb-2">Hương Vị Hài Hòa</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Sự kết hợp giữa chua, cay, mặn, ngọt và umami tạo nên nét đặc trưng riêng khó quên.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col items-center text-center group hover:-translate-y-1">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-50 text-brand-gold flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-stone-900 mb-2">Nguyên Liệu Phong Phú</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Gạo, rau củ tươi, thịt, hải sản và vô số loại gia vị tự nhiên tươi ngon dồi dào.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col items-center text-center group hover:-translate-y-1">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-50 text-brand-green flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-green group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-stone-900 mb-2">Chế Biến Đa Dạng</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Nghệ thuật luộc, hấp, kho, nướng, chiên, xào và trộn biến hóa đa dạng món ăn.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col items-center text-center group hover:-translate-y-1">
+                    <div class="w-16 h-16 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-2xl mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-stone-900 mb-2">Trình Bày Tinh Tế</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Món ăn kết hợp sắc màu tự nhiên bắt mắt, khơi gợi ngũ quan đầy lôi cuốn.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col items-center text-center group hover:-translate-y-1 md:col-span-3 lg:col-span-1">
+                    <div class="w-16 h-16 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl mb-4 group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-stone-900 mb-2">Tính Cộng Đồng</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Bữa cơm gia đình thể hiện sự sum họp, sẻ chia và gắn kết thắm thiết tình thân.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: KHÁM PHÁ ẨM THỰC BA MIỀN -->
+    <section id="ba-mien" class="py-20 bg-brand-creamdak/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-gold font-semibold uppercase tracking-widest text-sm">Hành Trình Hương Vị</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-stone-900 mt-2 mb-4">Khám Phá Ẩm Thực Ba Miền</h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto rounded-full mb-6"></div>
+                <p class="text-stone-600">Mỗi miền đất trên dải đất hình chữ S lại khoác lên mình nét ẩm thực độc đáo khó lẫn.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex p-1.5 rounded-full bg-white shadow-md border border-stone-200" role="tablist">
+                    <button class="region-tab active px-6 py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 bg-brand-red text-white shadow" data-target="mien-bac">
+                        <i class="fa-solid fa-mountain-sun mr-2"></i> Miền Bắc
+                    </button>
+                    <button class="region-tab px-6 py-3 rounded-full text-sm sm:text-base font-semibold text-stone-600 hover:text-brand-red transition-all duration-300" data-target="mien-trung">
+                        <i class="fa-solid fa-water mr-2"></i> Miền Trung
+                    </button>
+                    <button class="region-tab px-6 py-3 rounded-full text-sm sm:text-base font-semibold text-stone-600 hover:text-brand-red transition-all duration-300" data-target="mien-nam">
+                        <i class="fa-solid fa-sun mr-2"></i> Miền Nam
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="tab-content-container">
+                <!-- Miền Bắc -->
+                <div id="mien-bac" class="region-content transition-all duration-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-stone-200/80">
+                        <div class="lg:col-span-5 space-y-6">
+                            <span class="px-3 py-1 bg-red-100 text-brand-red rounded-full text-xs font-bold uppercase tracking-wider">Thanh Tao & Tinh Tế</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold font-heading text-stone-900">Ẩm Thực Miền Bắc</h3>
+                            <p class="text-stone-600 leading-relaxed">
+                                Ẩm thực miền Bắc nổi bật với hương vị nhẹ nhàng, thanh đạm, chú trọng sự hài hòa và giữ trọn nét vị tự nhiên của từng nguyên liệu tươi ngon.
+                            </p>
+                            <div class="space-y-3">
+                                <h4 class="font-bold text-stone-900 text-sm uppercase tracking-wide">Món Ăn Tiêu Biểu:</h4>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-red"></i> Phở Hà Nội</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-red"></i> Bún chả</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-red"></i> Chả cá Lã Vọng</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-red"></i> Bánh cuốn</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-red"></i> Bún thang</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-red"></i> Cốm làng Vòng</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                            <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=800&auto=format&fit=crop" alt="Phở Hà Nội" class="rounded-2xl h-48 sm:h-60 w-full object-cover shadow-md hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='https://placehold.co/600x400/991B1B/FFFFFF?text=Pho+Ha+Noi';">
+                            <img src="https://images.unsplash.com/photo-1626804475297-41608e074eb1?q=80&w=800&auto=format&fit=crop" alt="Bún Chả" class="rounded-2xl h-48 sm:h-60 w-full object-cover shadow-md hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='https://placehold.co/600x400/D97706/FFFFFF?text=Bun+Cha';">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miền Trung -->
+                <div id="mien-trung" class="region-content hidden transition-all duration-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-stone-200/80">
+                        <div class="lg:col-span-5 space-y-6">
+                            <span class="px-3 py-1 bg-amber-100 text-brand-gold rounded-full text-xs font-bold uppercase tracking-wider">Đậm Đà & Đặc Sắc</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold font-heading text-stone-900">Ẩm Thực Miền Trung</h3>
+                            <p class="text-stone-600 leading-relaxed">
+                                Ẩm thực miền Trung mang hương vị đậm đà, thường có vị cay nồng quyến rũ và cách chế biến vô cùng cầu kỳ. Nhiều món ăn gắn liền với nét đặc sắc văn hóa cung đình và đời sống dân gian.
+                            </p>
+                            <div class="space-y-3">
+                                <h4 class="font-bold text-stone-900 text-sm uppercase tracking-wide">Món Ăn Tiêu Biểu:</h4>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-gold"></i> Bún bò Huế</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-gold"></i> Mì Quảng</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-gold"></i> Cao lầu Hội An</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-gold"></i> Bánh bèo</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-gold"></i> Bánh bột lọc</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-gold"></i> Nem lụi</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                            <img src="https://images.unsplash.com/photo-1594998893017-36147cbcae05?q=80&w=800&auto=format&fit=crop" alt="Bún Bò Huế" class="rounded-2xl h-48 sm:h-60 w-full object-cover shadow-md hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='https://placehold.co/600x400/991B1B/FFFFFF?text=Bun+Bo+Hue';">
+                            <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?q=80&w=800&auto=format&fit=crop" alt="Mì Quảng" class="rounded-2xl h-48 sm:h-60 w-full object-cover shadow-md hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='https://placehold.co/600x400/D97706/FFFFFF?text=Mi+Quang';">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miền Nam -->
+                <div id="mien-nam" class="region-content hidden transition-all duration-500">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-stone-200/80">
+                        <div class="lg:col-span-5 space-y-6">
+                            <span class="px-3 py-1 bg-emerald-100 text-brand-green rounded-full text-xs font-bold uppercase tracking-wider">Phóng Khoáng & Phong Phú</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold font-heading text-stone-900">Ẩm Thực Miền Nam</h3>
+                            <p class="text-stone-600 leading-relaxed">
+                                Ẩm thực miền Nam mang hương vị ngọt dịu mặn mòi, nguyên liệu tươi trù phú chịu ảnh hưởng rực rỡ từ sản vật sông nước dạt dào.
+                            </p>
+                            <div class="space-y-3">
+                                <h4 class="font-bold text-stone-900 text-sm uppercase tracking-wide">Món Ăn Tiêu Biểu:</h4>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-green"></i> Cơm tấm Sài Gòn</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-green"></i> Hủ tiếu</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-green"></i> Bánh xèo</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-green"></i> Lẩu mắm</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-green"></i> Canh chua cá</div>
+                                    <div class="flex items-center gap-2 text-stone-700 font-medium text-sm"><i class="fa-solid fa-check text-brand-green"></i> Cá lóc nướng trui</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                            <img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?q=80&w=800&auto=format&fit=crop" alt="Cơm Tấm Sài Gòn" class="rounded-2xl h-48 sm:h-60 w-full object-cover shadow-md hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='https://placehold.co/600x400/15803D/FFFFFF?text=Com+Tam';">
+                            <img src="https://images.unsplash.com/photo-1626804475297-41608e074eb1?q=80&w=800&auto=format&fit=crop" alt="Bánh Xèo" class="rounded-2xl h-48 sm:h-60 w-full object-cover shadow-md hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='https://placehold.co/600x400/D97706/FFFFFF?text=Banh+Xeo';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: NHỮNG MÓN ĂN NỔI TIẾNG -->
+    <section id="mon-noi-tieng" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red font-semibold uppercase tracking-widest text-sm">Biểu Tượng Ẩm Thực</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-stone-900 mt-2 mb-4">Những Món Ăn Nổi Tiếng</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto rounded-full mb-6"></div>
+                <p class="text-stone-600">Những món ăn đại diện cho tâm hồn ẩm thực Việt đã vươn tầm thế giới.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Phở -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-stone-100 group flex flex-col">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=800&auto=format&fit=crop" alt="Phở" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/991B1B/FFFFFF?text=Pho+Viet+Nam';">
+                        <span class="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full shadow">Quốc Túy</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-heading text-stone-900 mb-2 group-hover:text-brand-red transition-colors">Phở Truyền Thống</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Phở là món ăn truyền thống nổi tiếng gồm bánh phở mềm, nước dùng ninh xương thảo mộc thơm ngon cùng thịt bò hoặc thịt gà chín tới kèm rau thơm.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-medium">
+                            <span><i class="fa-solid fa-clock text-brand-gold mr-1"></i> Phục vụ cả ngày</span>
+                            <span><i class="fa-solid fa-heart text-brand-red mr-1"></i> Yêu thích nhất</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Bánh mì -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-stone-100 group flex flex-col">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1626804475297-41608e074eb1?q=80&w=800&auto=format&fit=crop" alt="Bánh Mì" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/D97706/FFFFFF?text=Banh+Mi+Viet+Nam';">
+                        <span class="absolute top-4 right-4 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-full shadow">Thế Giới Yêu Thích</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-heading text-stone-900 mb-2 group-hover:text-brand-red transition-colors">Bánh Mì Việt Nam</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Bánh mì có lớp vỏ giòn rụm, phần nhân đậm đà phong phú với thịt, pate thơm béo, rau thơm và sốt đặc trưng hòa quyện hoàn hảo.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-medium">
+                            <span><i class="fa-solid fa-bolt text-brand-gold mr-1"></i> Tiện lợi & Đậm vị</span>
+                            <span><i class="fa-solid fa-globe text-blue-500 mr-1"></i> Top Street Food</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Gỏi cuốn -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-stone-100 group flex flex-col">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=800&auto=format&fit=crop" alt="Gỏi Cuốn" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/15803D/FFFFFF?text=Goi+Cuon';">
+                        <span class="absolute top-4 right-4 bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full shadow">Tươi Mát</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-heading text-stone-900 mb-2 group-hover:text-brand-red transition-colors">Gỏi Cuốn Tươi Mát</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Được cuộn khéo léo từ bánh tráng mỏng, tôm tươi, thịt luộc, bún cùng rau sống thanh mát, chấm kèm nước tương hột hoặc mắm nêm đậm đà.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-medium">
+                            <span><i class="fa-solid fa-seedling text-brand-green mr-1"></i> Healthy & Nhẹ nhàng</span>
+                            <span><i class="fa-solid fa-utensils text-brand-gold mr-1"></i> Khai vị hoàn hảo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Bánh chưng -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-stone-100 group flex flex-col">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?q=80&w=800&auto=format&fit=crop" alt="Bánh Chưng" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/15803D/FFFFFF?text=Banh+Chung+Tet';">
+                        <span class="absolute top-4 right-4 bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full shadow">Hồn Tết Việt</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-heading text-stone-900 mb-2 group-hover:text-brand-red transition-colors">Bánh Chưng Ngày Tết</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Món ăn truyền thống linh hồn dịp Tết Nguyên Đán từ gạo nếp dẻo thơm, đậu xanh bùi béo và thịt lợn ướp tiêu gói trong lá dong xanh.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-medium">
+                            <span><i class="fa-solid fa-box text-brand-gold mr-1"></i> Vuông tròn Đất Trời</span>
+                            <span><i class="fa-solid fa-sun text-amber-500 mr-1"></i> Truyền thống lâu đời</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Bánh xèo -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-stone-100 group flex flex-col">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?q=80&w=800&auto=format&fit=crop" alt="Bánh Xèo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/D97706/FFFFFF?text=Banh+Xeo';">
+                        <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Vàng Giòn</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-heading text-stone-900 mb-2 group-hover:text-brand-red transition-colors">Bánh Xèo Giòn Rụm</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Bánh xèo hấp dẫn với vỏ bánh vàng óng thơm mùi nghệ & nước cốt dừa, nhân tôm thịt giá đỗ đòn giòn ngọt, cuốn rau rừng và chắm mắm chua ngọt.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-medium">
+                            <span><i class="fa-solid fa-fire text-red-500 mr-1"></i> Nóng hổi vừa ăn</span>
+                            <span><i class="fa-solid fa-pepper-hot text-brand-red mr-1"></i> Đậm vị dân dã</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Cà phê Việt Nam -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-stone-100 group flex flex-col">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop" alt="Cà Phê Việt Nam" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/7F1D1D/FFFFFF?text=Ca+Phe+Viet+Nam';">
+                        <span class="absolute top-4 right-4 bg-stone-800 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Đặc Sản Thức Uống</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-heading text-stone-900 mb-2 group-hover:text-brand-red transition-colors">Cà Phê Việt Nam</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Cà phê phin đậm đà, cà phê sữa đá lừng danh và cà phê trứng béo ngậy là những dấu ấn văn hóa thưởng thức tuyệt vời của người Việt.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-medium">
+                            <span><i class="fa-solid fa-mug-hot text-amber-700 mr-1"></i> Phin & Đượm vị</span>
+                            <span><i class="fa-solid fa-mug-saucer text-stone-600 mr-1"></i> Văn hóa giao thoa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: ẨM THỰC ĐƯỜNG PHỐ -->
+    <section id="duong-pho" class="py-20 bg-brand-red text-white relative overflow-hidden pattern-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-goldlight font-semibold uppercase tracking-widest text-sm">Nhịp Sống Đô Thị</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white mt-2 mb-4">Ẩm Thực Đường Phố</h2>
+                <div class="w-24 h-1 bg-brand-goldlight mx-auto rounded-full mb-6"></div>
+                <p class="text-stone-200 text-base sm:text-lg">
+                    Ẩm thực đường phố là một phần không thể thiếu trong đời sống người Việt. Những món ăn bình dân, đa dạng, sáng tạo và luôn rộn ràng không khí chợ đêm.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
+                <!-- Food Item 1 -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20 hover:bg-white/20 transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-full bg-brand-goldlight text-brand-darkred flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-cookie"></i>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base text-white">Bánh Tráng Nướng</h3>
+                </div>
+
+                <!-- Food Item 2 -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20 hover:bg-white/20 transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-full bg-brand-goldlight text-brand-darkred flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-vihara"></i>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base text-white">Xiên Que & Cá Viên</h3>
+                </div>
+
+                <!-- Food Item 3 -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20 hover:bg-white/20 transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-full bg-brand-goldlight text-brand-darkred flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bowl-rice"></i>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base text-white">Xôi Mặn Thơm Dẻo</h3>
+                </div>
+
+                <!-- Food Item 4 -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20 hover:bg-white/20 transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-full bg-brand-goldlight text-brand-darkred flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-whiskey-glass"></i>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base text-white">Chè Ba Màu</h3>
+                </div>
+
+                <!-- Food Item 5 -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20 hover:bg-white/20 transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-full bg-brand-goldlight text-brand-darkred flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-pepper-hot"></i>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base text-white">Chuối Nếp Nướng</h3>
+                </div>
+
+                <!-- Food Item 6 -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20 hover:bg-white/20 transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-full bg-brand-goldlight text-brand-darkred flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base text-white">Bánh Tráng Trộn</h3>
+                </div>
+
+                <!-- Food Item 7 -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20 hover:bg-white/20 transition-all hover:-translate-y-1 group col-span-2 sm:col-span-1">
+                    <div class="w-12 h-12 rounded-full bg-brand-goldlight text-brand-darkred flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-glass-water"></i>
+                    </div>
+                    <h3 class="font-bold text-sm sm:text-base text-white">Nước Mía Siêu Sạch</h3>
+                </div>
+            </div>
+
+            <!-- Additional Highlight Banner inside Street Food -->
+            <div class="mt-12 bg-black/20 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-white/10">
+                <div class="space-y-2 text-center md:text-left">
+                    <h4 class="text-xl font-bold font-heading text-brand-goldlight">Văn Hóa Ẩm Thực Vỉa Hè Việt Nam</h4>
+                    <p class="text-stone-300 text-sm max-w-2xl">Không chỉ là những món ăn ngon lạ miệng, ẩm thực đường phố còn là nơi thể hiện sự sáng tạo và nét sinh hoạt gần gũi, ấm áp của người dân Việt Nam.</p>
+                </div>
+                <a href="#lien-he" class="px-6 py-3 rounded-full bg-brand-goldlight text-brand-darkred font-bold text-sm hover:bg-white transition-colors shrink-0">
+                    Góp Ý Món Bạn Thích
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: ẨM THỰC TRONG LỄ HỘI VÀ NGÀY TẾT -->
+    <section id="le-hoi" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-gold font-semibold uppercase tracking-widest text-sm">Phong Tục Tập Quán</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-stone-900 mt-2 mb-4">Ẩm Thực Trong Lễ Hội & Ngày Tết</h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto rounded-full mb-6"></div>
+                <p class="text-stone-600">Ẩm thực luôn gắn liền sâu sắc với các ngày lễ quan trọng và tín ngưỡng thờ cúng tổ tiên.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Timeline Event 1: Tết Nguyên Đán -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border border-stone-200/80 hover:shadow-xl transition-all flex flex-col sm:flex-row gap-6 items-start">
+                    <div class="w-16 h-16 rounded-2xl bg-red-100 text-brand-red flex items-center justify-center text-3xl shrink-0">
+                        <i class="fa-solid fa-fan"></i>
+                    </div>
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Dịp Lễ Đầu Năm</span>
+                        <h3 class="text-2xl font-bold font-heading text-stone-900">Tết Nguyên Đán</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Bánh chưng, bánh tét, thịt kho tàu hột vịt, dưa hành, củ kiệu, giò chả... là những món ăn đại diện cho sự sung túc, đoàn viên sum họp gia đình trong ngày đầu năm mới.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Event 2: Tết Trung Thu -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border border-stone-200/80 hover:shadow-xl transition-all flex flex-col sm:flex-row gap-6 items-start">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-100 text-brand-gold flex items-center justify-center text-3xl shrink-0">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Rằm Tháng Tám</span>
+                        <h3 class="text-2xl font-bold font-heading text-stone-900">Tết Trung Thu</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Bánh nướng thơm lừng, bánh dẻo ngọt ngào cùng mâm cỗ ngũ quả trông trăng là nét ký ức tuổi thơ tươi đẹp gắn liền với đêm hội rằm trung thu.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Event 3: Ngày Giỗ Tổ Tiên -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border border-stone-200/80 hover:shadow-xl transition-all flex flex-col sm:flex-row gap-6 items-start">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-brand-green flex items-center justify-center text-3xl shrink-0">
+                        <i class="fa-solid fa-hands-praying"></i>
+                    </div>
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Đạo Hiếu Uống Nước Nhớ Nguồn</span>
+                        <h3 class="text-2xl font-bold font-heading text-stone-900">Mâm Cơm Giỗ Tổ Tiên</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Mâm cơm cúng kính cẩn được chuẩn bị chỉn chu với những món ăn truyền thống nhằm thể hiện lòng biết ơn sâu sắc và sự tưởng nhớ kính yêu tới ông bà tổ tiên.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Event 4: Lễ Hội Truyền Thống -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border border-stone-200/80 hover:shadow-xl transition-all flex flex-col sm:flex-row gap-6 items-start">
+                    <div class="w-16 h-16 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-3xl shrink-0">
+                        <i class="fa-solid fa-drum"></i>
+                    </div>
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Văn Hóa Vùng Miền</span>
+                        <h3 class="text-2xl font-bold font-heading text-stone-900">Lễ Hội Địa Phương</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Mỗi địa phương lại có những sản vật và món ăn đặc sản riêng biệt gắn liền với các lễ hội dân gian, góp phần tôn vinh nét đặc sắc đa dạng của ẩm thực đất Việt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: ĐẶC SẢN ẨM THỰC THEO ĐỊA PHƯƠNG -->
+    <section id="dac-san" class="py-20 bg-brand-creamdak/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red font-semibold uppercase tracking-widest text-sm">Bản Bản Đồ Hương Vị</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-stone-900 mt-2 mb-4">Đặc Sản Ẩm Thực Theo Địa Phương</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto rounded-full mb-6"></div>
+                <p class="text-stone-600">Dọc theo chiều dài đất nước, mỗi tỉnh thành đều lưu giữ những món ăn độc đáo tạo dựng nên thương hiệu danh tiếng.</p>
+            </div>
+
+            <!-- Cities Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Hà Nội -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-stone-200 hover:border-brand-red transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-heading text-brand-red group-hover:translate-x-1 transition-transform">Hà Nội</h3>
+                        <span class="w-8 h-8 rounded-full bg-red-50 text-brand-red flex items-center justify-center font-bold text-xs">01</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Phở Hà Nội</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Bún chả</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Chả cá Lã Vọng</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Cốm làng Vòng</span>
+                    </div>
+                </div>
+
+                <!-- Hải Phòng -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-stone-200 hover:border-brand-red transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-heading text-brand-red group-hover:translate-x-1 transition-transform">Hải Phòng</h3>
+                        <span class="w-8 h-8 rounded-full bg-red-50 text-brand-red flex items-center justify-center font-bold text-xs">02</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Bánh đa cua</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Nem cua bể</span>
+                    </div>
+                </div>
+
+                <!-- Huế -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-stone-200 hover:border-brand-red transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-heading text-brand-red group-hover:translate-x-1 transition-transform">Huế</h3>
+                        <span class="w-8 h-8 rounded-full bg-red-50 text-brand-red flex items-center justify-center font-bold text-xs">03</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Bún bò Huế</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Cơm hến</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Bánh bèo</span>
+                    </div>
+                </div>
+
+                <!-- Đà Nẵng -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-stone-200 hover:border-brand-red transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-heading text-brand-red group-hover:translate-x-1 transition-transform">Đà Nẵng</h3>
+                        <span class="w-8 h-8 rounded-full bg-red-50 text-brand-red flex items-center justify-center font-bold text-xs">04</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Mì Quảng</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Bánh tráng cuốn thịt heo</span>
+                    </div>
+                </div>
+
+                <!-- Hội An -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-stone-200 hover:border-brand-red transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-heading text-brand-red group-hover:translate-x-1 transition-transform">Hội An</h3>
+                        <span class="w-8 h-8 rounded-full bg-red-50 text-brand-red flex items-center justify-center font-bold text-xs">05</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Cao lầu</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Bánh mì Hội An</span>
+                    </div>
+                </div>
+
+                <!-- TP. Hồ Chí Minh -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-stone-200 hover:border-brand-red transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-heading text-brand-red group-hover:translate-x-1 transition-transform">TP. Hồ Chí Minh</h3>
+                        <span class="w-8 h-8 rounded-full bg-red-50 text-brand-red flex items-center justify-center font-bold text-xs">06</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Cơm tấm Sài Gòn</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Hủ tiếu</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Bánh mì</span>
+                    </div>
+                </div>
+
+                <!-- Cần Thơ -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-stone-200 hover:border-brand-red transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-heading text-brand-red group-hover:translate-x-1 transition-transform">Cần Thơ</h3>
+                        <span class="w-8 h-8 rounded-full bg-red-50 text-brand-red flex items-center justify-center font-bold text-xs">07</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Bánh cống</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Lẩu mắm</span>
+                    </div>
+                </div>
+
+                <!-- An Giang -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-stone-200 hover:border-brand-red transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-heading text-brand-red group-hover:translate-x-1 transition-transform">An Giang</h3>
+                        <span class="w-8 h-8 rounded-full bg-red-50 text-brand-red flex items-center justify-center font-bold text-xs">08</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Bún cá</span>
+                        <span class="px-3 py-1 bg-stone-100 rounded-full text-xs font-medium text-stone-700">Bánh bò thốt nốt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8 & 9: GIÁ TRỊ VĂN HÓA & DU LỊCH -->
+    <section id="van-hoa" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-brand-red font-semibold uppercase tracking-widest text-sm">Gắn Kết & Lan Tỏa</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-heading text-stone-900 leading-tight">
+                        Giá Trị Văn Hóa & Sức Hút Du Lịch
+                    </h2>
+                    <p class="text-stone-600 leading-relaxed">
+                        Ẩm thực là một trong những yếu tố quan trọng bậc nhất thu hút du khách khi đến Việt Nam. Từ những quán ăn bình dân, khu chợ truyền thống đến nhà hàng sang trọng, mỗi nơi đều mang đến những góc nhìn mới mẻ và độc đáo.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <!-- Highlight 1 -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-red-100 text-brand-red flex items-center justify-center shrink-0 font-bold mt-1">
+                                <i class="fa-solid fa-landmark"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-900">Giá Trị Truyền Thống</h4>
+                                <p class="text-stone-600 text-sm">Lưu giữ phong tục tập quán lâu đời qua hàng ngàn năm lịch sử.</p>
+                            </div>
+                        </div>
+
+                        <!-- Highlight 2 -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-amber-100 text-brand-gold flex items-center justify-center shrink-0 font-bold mt-1">
+                                <i class="fa-solid fa-house-chimney-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-900">Giá Trị Gia Đình & Cộng Đồng</h4>
+                                <p class="text-stone-600 text-sm">Bữa cơm gia đình là dịp sum họp, sẻ chia tình cảm hiếu khách chân thành.</p>
+                            </div>
+                        </div>
+
+                        <!-- Highlight 3 -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 text-brand-green flex items-center justify-center shrink-0 font-bold mt-1">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-900">Quảng Bá Quốc Tế</h4>
+                                <p class="text-stone-600 text-sm">Đưa hình ảnh đất nước, con người Việt Nam đến gần hơn với bạn bè năm châu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop" alt="Bữa cơm Việt Nam" class="w-full h-auto object-cover" onerror="this.onerror=null; this.src='https://placehold.co/800x600/991B1B/FFFFFF?text=Van+Hoa+Am+Thuc';">
+                    </div>
+                    <!-- Card Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-stone-100 max-w-xs hidden sm:block">
+                        <p class="font-serif italic text-brand-red font-bold text-base mb-1">"Hương Vị Việt Nam"</p>
+                        <p class="text-xs text-stone-500">Nơi hội tụ tinh hoa, kết nối văn hóa và lan tỏa tình yêu ẩm thực Việt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10 & 11: KẾT LUẬN & THÔNG TIN LIÊN HỆ -->
+    <section id="lien-he" class="py-20 bg-stone-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-goldlight font-semibold uppercase tracking-widest text-sm">Kết Nối Với Chúng Tôi</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-heading text-white">Lan Tỏa Tinh Hoa Ẩm Thực Việt</h2>
+                    <p class="text-stone-300 leading-relaxed text-sm">
+                        Ẩm thực Việt Nam là niềm tự hào của dân tộc. Hãy đóng góp ý kiến hoặc chia sẻ câu chuyện ẩm thực của bạn cùng chúng tôi!
+                    </p>
+
+                    <div class="space-y-4 pt-4 border-t border-stone-800">
+                        <div class="flex items-center gap-4 text-stone-300">
+                            <div class="w-10 h-10 rounded-full bg-brand-red/30 text-brand-goldlight flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-stone-400">Địa chỉ</span>
+                                <span class="text-sm font-medium">Việt Nam</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-stone-300">
+                            <div class="w-10 h-10 rounded-full bg-brand-red/30 text-brand-goldlight flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-stone-400">Email</span>
+                                <a href="mailto:huongvivietnam@gmail.com" class="text-sm font-medium hover:text-brand-goldlight transition-colors">huongvivietnam@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-stone-300">
+                            <div class="w-10 h-10 rounded-full bg-brand-red/30 text-brand-goldlight flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-stone-400">Điện thoại</span>
+                                <a href="tel:0123456789" class="text-sm font-medium hover:text-brand-goldlight transition-colors">0123 456 789</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-stone-300">
+                            <div class="w-10 h-10 rounded-full bg-brand-red/30 text-brand-goldlight flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-stone-400">Thời gian phản hồi</span>
+                                <span class="text-sm font-medium">Thứ Hai – Thứ Sáu, 8:00 – 17:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="pt-4 flex gap-3">
+                        <a href="#" class="w-10 h-10 rounded-full bg-stone-800 hover:bg-brand-red text-white flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-stone-800 hover:bg-brand-red text-white flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-stone-800 hover:bg-brand-red text-white flex items-center justify-center transition-colors" aria-label="Youtube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="lg:col-span-7 bg-stone-800/80 p-8 rounded-3xl border border-stone-700/60 shadow-xl">
+                    <h3 class="text-xl font-bold font-heading text-white mb-6">Biểu Mẫu Liên Hệ / Góp Ý</h3>
+                    <form id="contactForm" class="space-y-5">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-300 mb-2">Họ và tên</label>
+                            <input type="text" id="fullname" required placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl bg-stone-900 border border-stone-700 text-white placeholder-stone-500 focus:outline-none focus:border-brand-gold transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-300 mb-2">Email</label>
+                            <input type="email" id="email" required placeholder="example@gmail.com" class="w-full px-4 py-3 rounded-xl bg-stone-900 border border-stone-700 text-white placeholder-stone-500 focus:outline-none focus:border-brand-gold transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-300 mb-2">Nội dung góp ý</label>
+                            <textarea id="message" rows="4" required placeholder="Chia sẻ suy nghĩ hoặc câu chuyện ẩm thực của bạn..." class="w-full px-4 py-3 rounded-xl bg-stone-900 border border-stone-700 text-white placeholder-stone-500 focus:outline-none focus:border-brand-gold transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-red hover:bg-brand-darkred text-white font-bold text-sm uppercase tracking-wider transition-all shadow-lg flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Gửi Góp Ý</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="mt-16 pt-8 border-t border-stone-800 text-center sm:flex sm:justify-between sm:items-center text-xs text-stone-400">
+                <p>© 2026 Hương Vị Việt Nam. Bảo lưu mọi quyền.</p>
+                <p class="mt-2 sm:mt-0 font-serif italic text-brand-goldlight text-sm">"Khám phá ẩm thực – Cảm nhận văn hóa – Yêu thêm Việt Nam!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Notification (Replaces alert) -->
+    <div id="modalOverlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl border border-stone-200 transform transition-all scale-95 opacity-0" id="modalBox">
+            <div class="w-16 h-16 bg-emerald-100 text-brand-green rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h4 class="text-xl font-bold font-heading text-stone-900 mb-2">Cảm Ơn Bạn!</h4>
+            <p class="text-stone-600 text-sm mb-6" id="modalText">Thông tin góp ý của bạn đã được gửi thành công. Chúng tôi sẽ phản hồi trong thời gian sớm nhất.</p>
+            <button id="closeModalBtn" class="w-full py-3 rounded-xl bg-brand-red text-white font-bold text-sm hover:bg-brand-darkred transition-colors">
+                Đóng
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Tab Switching for 3 Miền
+        const regionTabs = document.querySelectorAll('.region-tab');
+        const regionContents = document.querySelectorAll('.region-content');
+
+        regionTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Deactivate all tabs
+                regionTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-brand-red', 'text-white', 'shadow');
+                    t.classList.add('text-stone-600');
+                });
+
+                // Activate clicked tab
+                tab.classList.add('active', 'bg-brand-red', 'text-white', 'shadow');
+                tab.classList.remove('text-stone-600');
+
+                // Hide all contents
+                const targetId = tab.getAttribute('data-target');
+                regionContents.forEach(content => {
+                    if (content.id === targetId) {
+                        content.classList.remove('hidden');
+                    } else {
+                        content.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Form Submit Modal (Replacing alert)
+        const contactForm = document.getElementById('contactForm');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalBox = document.getElementById('modalBox');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const fullname = document.getElementById('fullname').value;
+
+            document.getElementById('modalText').textContent = `Cảm ơn ${fullname} đã gửi đóng góp ý kiến cho Hương Vị Việt Nam. Chúng tôi sẽ ghi nhận và phản hồi sớm nhất!`;
+
+            modalOverlay.classList.remove('hidden');
+            setTimeout(() => {
+                modalBox.classList.remove('scale-95', 'opacity-0');
+                modalBox.classList.add('scale-100', 'opacity-100');
+            }, 10);
+
+            contactForm.reset();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            modalBox.classList.remove('scale-100', 'opacity-100');
+            modalBox.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modalOverlay.classList.add('hidden');
+            }, 200);
+        });
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModalBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
